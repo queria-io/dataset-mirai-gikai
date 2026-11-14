@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: bills
+    columns:
+      - name: bill_id
+        data_tests: [not_null, unique]
+      - name: name
+        data_tests: [not_null]
+  - name: reports
+    columns:
+      - name: report_id
+        data_tests: [not_null, unique]
+      - name: bill_id
+        data_tests: [not_null]
+  - name: opinions
+    columns:
+      - name: report_id
+        data_tests: [not_null]
+  - name: messages
+    columns:
+      - name: report_id
+        data_tests: [not_null]
+      - name: content
+        data_tests: [not_null]

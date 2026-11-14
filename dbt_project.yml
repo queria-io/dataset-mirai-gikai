@@ -1,0 +1,17 @@
+name: "mirai_gikai"
+version: "1.0.0"
+
+profile: "mirai_gikai"
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["shared/macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  mirai_gikai:
+    +database: mirai_gikai
+    +materialized: table

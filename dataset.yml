@@ -1,0 +1,52 @@
+# この dataset.yml は fdl commit が読む（FDL の dataset.json を YAML で書いたもの）。
+# 表の説明は models/ の *.table.yml に書く。表と列の型・NULL・行数は fdl commit がカタログから埋める。
+# Queria だけの項目（テーマ・カバー・列の意味）は annotations.queria に書く。
+name: mirai_gikai
+title: みらい議会
+description: |-
+  チームみらいが運営する「みらい議会」のオープンデータ API から取得したデータです。国会の法案の一覧（bills.bills）と、法案についてのAIインタビューの回答（interviews.reports・interviews.opinions・interviews.messages）のテーブルがあります。毎日、すべてを取得し直します。
+
+  法案は法案名で shugiin.bills.bills の議案の件名と結合でき、そこから法令番号で e_gov.laws の法令と、審議した国会・委員会で kokkai.minutes.meetings の会議録と結合できます。法案のテーブルは法案を特定する項目と審議の状況だけを持ち、みらい議会の解説の文章は持ちません。
+
+  AIインタビューは、回答者が公開に同意した回答から、チームみらいが個人を識別できる情報を除いて公開しているものです。回答者やその関係者を識別・推測すること、そのために他の情報と照合することは利用規約で禁止されています。公開の対象から外れた回答は、次の取得で消えます。
+
+  出典：
+  - データ出典：「みらい議会AIインタビュー（チームみらい）」
+  - データ提供元URL：https://gikai.team-mir.ai/
+  - 本規約のURL：https://gikai.team-mir.ai/developers/interview-data-terms
+  - ライセンス：CC BY 4.0
+keywords:
+  - みらい議会
+  - チームみらい
+  - 国会
+  - 法案
+  - 法律案
+  - AIインタビュー
+  - 意見
+  - パブリックコメント
+homepage: https://github.com/queria-io/dataset-mirai-gikai
+language: ja
+# AIインタビューは CC BY 4.0（みらい議会AIインタビューデータ利用規約）。
+# 法案 API には利用条件の表示が無いため、法案のテーブルは法案名・審議状況・日付・URL だけを持つ
+licenses:
+  - CC-BY-4.0
+sources:
+  - title: みらい議会 開発者向け（オープンデータAPI）
+    path: https://gikai.team-mir.ai/developers
+  - title: みらい議会AIインタビューデータ利用規約
+    path: https://gikai.team-mir.ai/developers/interview-data-terms
+contributors:
+  - title: チームみらい
+    path: https://gikai.team-mir.ai/
+    roles: [rightsHolder]
+spatial_coverage: [JP]
+update_frequency: daily
+schemas:
+  - name: bills
+    title: 法案
+  - name: interviews
+    title: AIインタビュー
+annotations:
+  queria:
+    themes: [government_finance]
+    cover: 🗳️
