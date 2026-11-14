@@ -1,0 +1,36 @@
+schema: bills
+name: bills
+title: 法案
+description: |-
+  みらい議会に載っている法案の一覧です。1 行が 1 件の法案です。法案を特定する項目と審議の状況だけを持ち、みらい議会の解説の文章は持ちません。解説はみらい議会の法案のページ（url）で読めます。
+
+  - 法案名（name）は衆議院の議案の件名と同じ書き方で、shugiin.bills.bills の title と結合できます。同じ件名の議案が複数の国会にある（毎年の給与法の改正など）ときは、提出日（submitted_date）と衆議院の議案受理年月日で区別します
+  - 法案ではない記事（論点の整理など）も含みます。status が preparing の行です
+primary_key: [bill_id]
+sources:
+  - title: みらい議会 オープンデータAPI
+    path: https://gikai.team-mir.ai/api/open-data/bills
+fields:
+  - name: bill_id
+    title: 法案 ID
+    description: みらい議会が法案ごとに付ける ID。interviews.reports の bill_id と結合できる
+  - name: name
+    title: 法案名
+    description: 正式な法案名。2 件の法案をまとめた行は「、」で区切って並ぶ
+  - name: status
+    title: 審議状況
+    description: preparing（準備中）・in_originating_house（先議院で審議中）・in_receiving_house（後議院で審議中）・enacted（成立）など
+  - name: status_label
+    title: 審議状況（表示名）
+    description: 例 参議院審議中
+  - name: originating_house
+    title: 先議院
+    description: HR（衆議院）・HC（参議院）
+  - name: submitted_date
+    title: 提出日
+    description: 日本時間の日付
+  - name: published_at
+    title: 公開日時
+    description: みらい議会に法案のページを公開した日時
+  - name: url
+    title: みらい議会の URL

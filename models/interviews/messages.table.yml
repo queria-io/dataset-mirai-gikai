@@ -1,0 +1,20 @@
+schema: interviews
+name: messages
+title: AIインタビューの対話
+description: AIインタビューの対話の記録です。1 行が 1 回の発言で、message_number の順に並べると対話になります。
+primary_key: [report_id, message_number]
+sources:
+  - title: みらい議会 オープンデータAPI
+    path: https://gikai.team-mir.ai/api/open-data/interviews
+fields:
+  - name: report_id
+    title: インタビュー ID
+    description: interviews.reports の report_id と結合できる
+  - name: message_number
+    title: 番号
+    description: インタビューの中での発言の順番。1 から始まる
+  - name: speaker
+    title: 話者
+    description: assistant（AI の聞き手）・user（回答者）
+  - name: content
+    title: 発言
