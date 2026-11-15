@@ -14,6 +14,7 @@ clean-targets:
 models:
   mirai_gikai:
     +database: mirai_gikai
+    +materialized: table
     interviews:
       raw:
         +materialized: table
