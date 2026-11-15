@@ -1,0 +1,4 @@
+schema: bills
+name: raw_bills
+description: 法案の一覧（取得したままの形）
+annotations: { queria: { published: false } }

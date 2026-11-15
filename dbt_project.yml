@@ -14,4 +14,17 @@ clean-targets:
 models:
   mirai_gikai:
     +database: mirai_gikai
-    +materialized: table
+    interviews:
+      raw:
+        +materialized: table
+      stg:
+        +materialized: view
+      mart:
+        +materialized: table
+    bills:
+      raw:
+        +materialized: table
+      stg:
+        +materialized: view
+      mart:
+        +materialized: table
