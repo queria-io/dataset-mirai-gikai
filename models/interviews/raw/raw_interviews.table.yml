@@ -1,4 +1,0 @@
-schema: interviews
-name: raw_interviews
-description: インタビュー（取得したままの形）
-annotations: { queria: { published: false } }
