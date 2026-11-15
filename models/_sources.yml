@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: raw
-    meta:
-      external_location: "read_json('data/{name}.ndjson.gz', format = 'newline_delimited')"
-    tables:
-      - name: interviews
