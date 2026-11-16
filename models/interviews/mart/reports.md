@@ -1,5 +1,6 @@
-schema: interviews
-name: reports
+---
+$schema: https://queria.io/schemas/table/v1.json
+table: interviews.reports
 title: AIインタビュー
 description: |-
   みらい議会のAIインタビューで、回答者が公開に同意した回答です。1 行が 1 件のインタビューで、回答者の立場・賛否と要約を持ちます。チームみらいが氏名・住所・連絡先など個人を識別できる情報を除いて公開しています。
@@ -32,3 +33,4 @@ fields:
     title: 要約
   - name: created_at
     title: 作成日時
+---

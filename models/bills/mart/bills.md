@@ -1,5 +1,6 @@
-schema: bills
-name: bills
+---
+$schema: https://queria.io/schemas/table/v1.json
+table: bills.bills
 title: 法案
 description: |-
   みらい議会に載っている法案の一覧です。1 行が 1 件の法案です。法案を特定する項目と審議の状況だけを持ち、みらい議会の解説の文章は持ちません。解説はみらい議会の法案のページ（url）で読めます。
@@ -34,3 +35,4 @@ fields:
     description: みらい議会に法案のページを公開した日時
   - name: url
     title: みらい議会の URL
+---
