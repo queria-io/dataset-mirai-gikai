@@ -1,5 +1,6 @@
-schema: interviews
-name: opinions
+---
+$schema: https://queria.io/schemas/table/v1.json
+table: interviews.opinions
 title: AIインタビューの意見
 description: AIインタビューの要約に挙がった意見です。1 行が 1 件の意見です。
 primary_key: [report_id, opinion_number]
@@ -17,3 +18,4 @@ fields:
     title: 意見の見出し
   - name: content
     title: 意見の内容
+---

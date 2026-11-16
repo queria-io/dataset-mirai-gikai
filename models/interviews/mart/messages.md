@@ -1,5 +1,6 @@
-schema: interviews
-name: messages
+---
+$schema: https://queria.io/schemas/table/v1.json
+table: interviews.messages
 title: AIインタビューの対話
 description: AIインタビューの対話の記録です。1 行が 1 回の発言で、message_number の順に並べると対話になります。
 primary_key: [report_id, message_number]
@@ -18,3 +19,4 @@ fields:
     description: assistant（AI の聞き手）・user（回答者）
   - name: content
     title: 発言
+---
