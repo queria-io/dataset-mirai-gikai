@@ -1,4 +1,4 @@
-$schema: https://queria.io/schemas/dataset/v1.json
+$schema: https://tabledoc.queria.io/schemas/dataset/v1.json
 name: mirai_gikai
 title: みらい議会
 description: |-
@@ -13,7 +13,7 @@ description: |-
   - データ提供元URL：https://gikai.team-mir.ai/
   - 本規約のURL：https://gikai.team-mir.ai/developers/interview-data-terms
   - ライセンス：CC BY 4.0
-keywords:
+topics:
   - みらい議会
   - チームみらい
   - 国会
@@ -29,12 +29,15 @@ language: ja
 licenses:
   - CC-BY-4.0
 sources:
-  - title: みらい議会 開発者向け（オープンデータAPI）
+  - id: developers
+    title: みらい議会 開発者向け（オープンデータAPI）
     path: https://gikai.team-mir.ai/developers
-  - title: みらい議会AIインタビューデータ利用規約
+  - id: interview-data-terms
+    title: みらい議会AIインタビューデータ利用規約
     path: https://gikai.team-mir.ai/developers/interview-data-terms
 contributors:
-  - title: チームみらい
+  - id: gikai
+    title: チームみらい
     path: https://gikai.team-mir.ai/
     roles: [rightsHolder]
 spatial_coverage: [JP]
@@ -44,5 +47,3 @@ schemas:
     title: 法案
   - name: interviews
     title: AIインタビュー
-themes: [government_finance]
-cover: 🗳️

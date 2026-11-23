@@ -1,6 +1,4 @@
----
-$schema: https://queria.io/schemas/table/v1.json
-table: bills.bills
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
 title: 法案
 description: |-
   みらい議会に載っている法案の一覧です。1 行が 1 件の法案です。法案を特定する項目と審議の状況だけを持ち、みらい議会の解説の文章は持ちません。解説はみらい議会の法案のページ（url）で読めます。
@@ -9,9 +7,10 @@ description: |-
   - 法案ではない記事（論点の整理など）も含みます。status が preparing の行です
 primary_key: [bill_id]
 sources:
-  - title: みらい議会 オープンデータAPI
+  - id: bills
+    title: みらい議会 オープンデータAPI
     path: https://gikai.team-mir.ai/api/open-data/bills
-fields:
+columns:
   - name: bill_id
     title: 法案 ID
     description: みらい議会が法案ごとに付ける ID。interviews.reports の bill_id と結合できる
@@ -35,4 +34,3 @@ fields:
     description: みらい議会に法案のページを公開した日時
   - name: url
     title: みらい議会の URL
----
