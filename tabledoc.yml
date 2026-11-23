@@ -32,14 +32,14 @@ licenses:
 sources:
   - id: developers
     title: みらい議会 開発者向け（オープンデータAPI）
-    path: https://gikai.team-mir.ai/developers
+    url: https://gikai.team-mir.ai/developers
   - id: interview-data-terms
     title: みらい議会AIインタビューデータ利用規約
-    path: https://gikai.team-mir.ai/developers/interview-data-terms
+    url: https://gikai.team-mir.ai/developers/interview-data-terms
 contributors:
   - id: gikai
     title: チームみらい
-    path: https://gikai.team-mir.ai/
+    url: https://gikai.team-mir.ai/
     roles: [rightsHolder]
 spatial_coverage: [JP]
 update_frequency: daily
