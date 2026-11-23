@@ -9,7 +9,7 @@ primary_key: [bill_id]
 sources:
   - id: bills
     title: みらい議会 オープンデータAPI
-    path: https://gikai.team-mir.ai/api/open-data/bills
+    url: https://gikai.team-mir.ai/api/open-data/bills
 columns:
   - name: bill_id
     title: 法案 ID
