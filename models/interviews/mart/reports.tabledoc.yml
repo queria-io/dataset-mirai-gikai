@@ -1,16 +1,12 @@
----
-$schema: https://queria.io/schemas/table/v1.json
-table: interviews.reports
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
 title: AIインタビュー
 description: |-
   みらい議会のAIインタビューで、回答者が公開に同意した回答です。1 行が 1 件のインタビューで、回答者の立場・賛否と要約を持ちます。チームみらいが氏名・住所・連絡先など個人を識別できる情報を除いて公開しています。
 
   回答者やその関係者を識別・推測すること、そのために他の情報と照合することは、利用規約で禁止されています。
 primary_key: [report_id]
-sources:
-  - title: みらい議会 オープンデータAPI
-    path: https://gikai.team-mir.ai/api/open-data/interviews
-fields:
+sources: [interviews]
+columns:
   - name: report_id
     title: インタビュー ID
   - name: bill_id
@@ -33,4 +29,3 @@ fields:
     title: 要約
   - name: created_at
     title: 作成日時
----
