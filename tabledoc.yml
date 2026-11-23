@@ -23,7 +23,6 @@ topics:
   - AIインタビュー
   - 意見
   - パブリックコメント
-homepage: https://github.com/queria-io/dataset-mirai-gikai
 language: ja
 # AIインタビューは CC BY 4.0（みらい議会AIインタビューデータ利用規約）。
 # 法案 API には利用条件の表示が無いため、法案のテーブルは法案名・審議状況・日付・URL だけを持つ
