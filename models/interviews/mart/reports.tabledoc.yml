@@ -17,9 +17,11 @@ columns:
   - name: stance
     title: 賛否
     description: for（賛成）・against（反対）・neutral（中立）
+    dimension: categorical
   - name: role
     title: 立場
     description: general_citizen（一般市民）・daily_life_affected（生活に影響を受ける）・work_related（仕事で関わる）・subject_expert（専門家）など
+    dimension: categorical
   - name: role_title
     title: 立場（表示名）
   - name: role_description

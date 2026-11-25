@@ -20,12 +20,15 @@ columns:
   - name: status
     title: 審議状況
     description: preparing（準備中）・in_originating_house（先議院で審議中）・in_receiving_house（後議院で審議中）・enacted（成立）など
+    dimension: categorical
   - name: status_label
     title: 審議状況（表示名）
     description: 例 参議院審議中
+    dimension: categorical
   - name: originating_house
     title: 先議院
     description: HR（衆議院）・HC（参議院）
+    dimension: categorical
   - name: submitted_date
     title: 提出日
     description: 日本時間の日付
