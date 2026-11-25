@@ -28,6 +28,7 @@ columns:
   - name: originating_house
     title: 先議院
     description: HR（衆議院）・HC（参議院）
+    dimension: categorical
   - name: submitted_date
     title: 提出日
     description: 日本時間の日付
